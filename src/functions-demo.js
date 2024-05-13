@@ -43,15 +43,29 @@ const { greet } = new Person('Dante', 20);
  // greet(); // rule of thumb use the arrow functions when handling classes.
 
 
-const longRunningTask = (cb) => {
-    setTimeout(() => {
-        cb();
-        console.log("🚀 ~ longRunningTask was executed!")
-    }, 1000)
+const longRunningTask = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("🚀 ~ longRunningTask was executed!")
+            resolve(true);
+        }, 1000)
+    })
 };
 
 const immediatelyInvokedTask = () => {
     console.log("🚀 ~ immediatelyInvokedTask was executed!");
 }
 
-longRunningTask(immediatelyInvokedTask);
+const main = async () => {
+    const res = await longRunningTask();
+    if(res) {
+        console.log("success!")
+    }
+    else {
+        console.log("failed")
+    }
+
+    immediatelyInvokedTask();
+}
+
+main()
