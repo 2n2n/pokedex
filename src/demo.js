@@ -17,20 +17,31 @@
 
 class Person {
     name;
+    age;
+    constructor(_name = 'Anonymous', _age = 0) {
+        this.name = _name;
+        this.age = _age;
+    }
+
     greet = function() {
-        console.log ('Greetings from', this.name)
+        console.log ('Greetings from', this.name ,'and my age is ', this.age)
     }
 }
 
-const p1 = new Person()
-p1.name = "Anthony"
+const { skills } = {
+    name: "Anthony Yolach Lloveras",
+    position: "Lead Developer",
+    yearsOfExperience: 10,
+    skills: [
+        { title: 'Javascript', yrsOfExperience: 5 },
+        { title: 'PHP', yrsOfExperience: 10 },
+    ]
+}
 
-const p2 = new Person()
-p2.name = "kendrick"
+// for Dante's output: { title: 'PHP', yrsOfExperience: 10 }
+const [java,php] = skills
+// console.log(php)
 
-const participants = [p1, p2];
+console.log(php.title)
+// Kendrick's output: PHP
 
-console.log(participants)
-
-console.log(participants[0].greet())
-console.log(participants[1].greet())
