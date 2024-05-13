@@ -16,5 +16,11 @@
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
         }
+    },
+    {
+        "name": "charmander",
+        "sprites": {
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+        }
     }
 ]

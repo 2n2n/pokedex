@@ -7,12 +7,13 @@ function App() {
   return (
     <div className="container">
       <SearchComponent />
-      { 
-        pokemons.map((_pokemon) => {
-          return <PokemonCardComponent pokemon={_pokemon} />;
-        })
-      }
-      
+      <div className="row g-2">
+        { 
+          pokemons.map((_pokemon) => {
+            return <PokemonCardComponent pokemon={_pokemon} />;
+          })
+        }
+      </div>
     </div>
   );
 }
