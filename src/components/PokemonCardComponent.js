@@ -7,10 +7,10 @@ const PokemonCardComponent = ({ pokemon }) => {
             <div className="card">
                 <img 
                     src={pokemon.sprites.front_default} 
-                    className="card-img-top" alt="bulbasaur" />
-                <div class="card-body text-center">
+                    className="card-img-top" alt={pokemonName} />
+                <div className="card-body text-center">
                     <h5 className="card-title text-center">{pokemonName}</h5>
-                    <a href="#" class="btn btn-primary">{`View ${pokemonName}`}</a>
+                    <a href="#" className="btn btn-primary">{`View ${pokemonName}`}</a>
                 </div>
             </div>
         </div>
