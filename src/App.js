@@ -3,7 +3,7 @@ import SearchComponent from "./components/SearchComponent";
 import pokemons from './dummy/pokemon.json';
 
 function App() {
-
+  
   return (
     <div className="container">
       <SearchComponent />
