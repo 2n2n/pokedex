@@ -2,49 +2,57 @@
     {
         "name": "bulbasaur",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
         }
     },
     {
         "name": "ivysaur",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
         }
     },
     {
         "name": "venusaur",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
         }
     },
     {
         "name": "charmander",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"
         }
     },
     {
         "name": "charmeleon",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
         }
     },
     {
         "name": "charizard",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"
         }
     },
     {
         "name": "mewtwo",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/150.png"
         }
     },
     {
         "name": "mew",
         "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png"
+            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+            "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/151.png"
         }
     }
 ]
