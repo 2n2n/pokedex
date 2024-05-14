@@ -1,13 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css"
+import Home from './components/pages/Home';
+import Pokedex from './components/pages/Pokedex';
+import App from './components/pages/App';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/pokedex',
+    element: <Pokedex />
+  },
+  {
+    path: '/app',
+    element: <App />
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider  router={router}/>
   </React.StrictMode>
 );
 

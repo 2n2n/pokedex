@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { CounterContext, LoaderContext } from "../App";
+import { CounterContext, LoaderContext } from "./pages/App";
 import LoaderComponent from "./LoaderComponent";
 
 const CounterLabelComponent = () => {

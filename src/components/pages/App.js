@@ -1,9 +1,10 @@
-import CounterComponent from "./components/CounterComponent";
+import CounterComponent from "../CounterComponent";
 import { useState, createContext } from "react";
 import "./App.css";
-import SearchComponent from "./components/SearchComponent";
-import PokemonCardComponent from "./components/PokemonCardComponent";
-import pokemons from './dummy/pokemon.json';
+import SearchComponent from "../SearchComponent";
+import PokemonCardComponent from "../PokemonCardComponent";
+import pokemons from '../../dummy/pokemon.json';
+import NavigationComponent from "../NavigationComponent";
 
 
 export const CounterContext = createContext();
@@ -22,6 +23,11 @@ function App() {
         setIsLoading
       }}>
         <div className="container">
+          <div className="row">
+            <div className="col">
+              <NavigationComponent />
+            </div>
+          </div>
           <div className="row">
             <div className="col-3">
               <CounterComponent />

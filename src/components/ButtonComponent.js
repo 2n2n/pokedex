@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CounterContext } from "../App";
+import { CounterContext } from "./pages/App";
 
 const ButtonComponent = () => {
     const { setCounterValue, isLoading } = useContext(CounterContext);
