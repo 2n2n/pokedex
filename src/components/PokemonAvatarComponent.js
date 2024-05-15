@@ -7,10 +7,10 @@ const PokemonAvatarComponent = ({ pokemon }) => {
       setPokemonView(!pokemonView)
     }
     
-    useEffect(() => {
+    // useEffect(() => {
         
 
-    }, [pokemonView]);
+    // }, [pokemonView]);
     
     return (
         <div className="pokemon-card">
@@ -30,8 +30,8 @@ const PokemonAvatarComponent = ({ pokemon }) => {
 
             <center>
                 <div className="navigation-buttons">
-                    <button onClick={pokemonChangeView} >&lt;</button>
-                    <button onClick={pokemonChangeView} >&gt;</button>
+                    <button className="btn" onClick={pokemonChangeView} >◀</button>
+                    <button className="btn" onClick={pokemonChangeView} >▶</button>
                 </div>
             </center>
         </div>

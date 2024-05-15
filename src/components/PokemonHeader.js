@@ -1,6 +1,6 @@
 const PokemonHeader= ()=>{
     return(
-        <div className="container">
+        <div className="container ">
             <center>
                 <img 
                 src='https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg'
@@ -9,16 +9,16 @@ const PokemonHeader= ()=>{
             <div className="container mt-3">
                 <ul className="nav justify-content-center">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">📱 Pokedex</a>
+                        <a className="nav-link active text-dark" aria-current="page" href="/">📱 Pokedex</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">🐉Legendary Pokemon</a>
+                        <a className="nav-link text-dark" href="#">🐉Legendary Pokemon</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">✨Shiny Pokemon</a>
+                        <a className="nav-link text-dark" href="/shinypokemon">✨Shiny Pokemon</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">💁🏻‍♂️About Us</a>
+                        <a className="nav-link text-dark" href="#">💁🏻‍♂️About Us</a>
                     </li>
                 </ul>
             </div>

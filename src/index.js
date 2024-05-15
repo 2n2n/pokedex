@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap";
+import App from './App';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import ShinyPokemonForm from './components/ShinyPokemonComponent';
+
+const router = createBrowserRouter([
+  {
+    path: '/*',
+    element: <App />,
+  },
+  {
+    path: '/shinypokemon',
+    element: <ShinyPokemonForm />,
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider  router={router}/>
   </React.StrictMode>
 );
 

@@ -4,55 +4,84 @@
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
-        }
+        },
+        "moves" : ["razor-wind","swords-dance","cut","bind","vine-whip","headbutt","sleep-powder","petal-dance","string-shot"],
+        "types" : ["grass","poison"],
+        "about" : "Bulbasaur is a Grass/Poison type Pokémon, Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves. "
     },
     {
         "name": "ivysaur",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/2.png"
-        }
+        },
+        "moves" : ["headbutt","vine-whip","bind","cut","body-slam","take-down"],
+        "types" : ["grass","poison"],
+        "about" : "Ivysaur, is a Grass/Poison-type Pokémon. Ivysaur will evolve from Bulbasaur at level 16 and evolves into Venusaur starting at level 32"
     },
     {
         "name": "venusaur",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/3.png"
-        }
+        },
+        "moves" : ["hyper-beam","razor-wind","swords-dance","cut","bind","vine-whip","headbutt","sleep-powder","petal-dance","string-shot","body-slam","take-down"],
+        "types" : ["grass","poison"],
+        "about" : "Venusaur is a large, quadrupedal Pokémon with a turquoise body. It has small red eyes and several large ferns on its back and head. The plant bulb that was on the back of its previous evolutions, Bulbasaur and Ivysaur, has now bloomed into a large flower with large pink petals and a yellow center."
+    
     },
     {
         "name": "charmander",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/4.png"
-        }
+        },
+        "moves" : ["razor-wind","swords-dance","cut","bind","vine-whip","headbutt","sleep-powder","petal-dance","string-shot"],
+        "types" : ["grass","poison"],
+        "about" : "Bulbasaur is a Grass/Poison type Pokémon, Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves. "
+    
     },
     {
         "name": "charmeleon",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/5.png"
-        }
+        },
+        "moves" : ["razor-wind","swords-dance","cut","bind","vine-whip","headbutt","sleep-powder","petal-dance","string-shot"],
+        "types" : ["grass","poison"],
+        "about" : "Bulbasaur is a Grass/Poison type Pokémon, Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves. "
+    
     },
     {
         "name": "charizard",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/6.png"
-        }
+        },
+        "moves" : ["razor-wind","swords-dance","cut","bind","vine-whip","headbutt","sleep-powder","petal-dance","string-shot"],
+        "types" : ["grass","poison"],
+        "about" : "Bulbasaur is a Grass/Poison type Pokémon, Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves. "
+    
     },
     {
         "name": "mewtwo",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/150.png"
-        }
+        },
+        "moves" : ["headbutt","vine-whip","bind","cut","body-slam","take-down"],
+        "types" : ["grass","poison"],
+        "about" : ""
     },
     {
         "name": "mew",
         "sprites": {
             "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
             "back_default":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/151.png"
-        }
+        },
+        "moves" : ["razor-wind","swords-dance","cut","bind","vine-whip","headbutt","sleep-powder","petal-dance","string-shot"],
+        "types" : ["grass","poison"],
+        "about" : "Bulbasaur is a Grass/Poison type Pokémon, Bulbasaur is a small, mainly turquoise amphibian Pokémon with red eyes and a green bulb on its back. It is based on a frog/toad, with the bulb resembling a plant bulb that grows into a flower as it evolves. "
+    
     }
 ]

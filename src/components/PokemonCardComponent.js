@@ -1,13 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import NameFy from "../helpers/word-helper";
 import LoaderComponent from "./LoaderComponent";
 import PokemonAvatarComponent from "./PokemonAvatarComponent";
+import PokemonPokedex from "./PokemonPokedex";
+import { pokemonDetails } from "../App";
 // import TestComponent from "./TestComponent";
 
 const PokemonCardComponent = ({ pokemon }) => {
     const pokemonName = NameFy(pokemon.name)
     const [isLoading, setIsLoading] = useState(true);
+    const { setPokemonInfo } = useContext(pokemonDetails);
 
+
+    
     useEffect(() => {
         // set up
         function randomGen(min, max) {
@@ -34,7 +39,7 @@ const PokemonCardComponent = ({ pokemon }) => {
                     <PokemonAvatarComponent pokemon={pokemon}/>
                     <div class="card-body text-center">
                         <h5 className="card-title text-center">{pokemonName}</h5>
-                        <a href="#" class="btn btn-primary">{`View ${pokemonName}`}</a>
+                        <a href="#" class="btn btn-primary" onClick={()=>setPokemonInfo({pokemon})} >{`View ${pokemonName}`}</a>
                     </div>
                 </LoaderComponent>
             </div>
