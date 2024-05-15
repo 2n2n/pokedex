@@ -8,12 +8,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Pokedex from './components/pages/Pokedex';
 import ShinyPokemonForm from './components/ShinyPokemonComponent';
+import PokemonCatalog from './components/pages/PokemonCatalog';
 
 const router = createBrowserRouter([
   {
-    path: '/*',
+    path: '/',
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <PokemonCatalog />
+      },
+      {
+        path: "details",
+        element: <Pokedex />,
+      },
+    ]
   },
   {
     path: '/shinypokemon',
