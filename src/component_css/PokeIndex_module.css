@@ -1,0 +1,29 @@
+#cardCircle{
+    vertical-align: middle;
+    width: 300px;
+    height: 250px;
+    border-radius: 50%;
+    background: #e9ecef;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #cardEvo {
+    margin-left: 1rem;
+    vertical-align: middle;
+    width: 113px;
+    height: 108px;
+    border-radius: 50%;
+    background: #e9ecef;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    
+}
+
+#arrows{
+    width: 12%;
+    font-size: 39px;
+}
+
+#pokeNamediv{
+    margin-top: 17px;
+}

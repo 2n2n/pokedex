@@ -4,6 +4,8 @@ import '../component_css/PokemonCardComponent_module.css';
 import { useEffect, useState } from 'react';
 import LoaderComponent from './LoaderComponent';
 import { getPokemonURL } from '../response/PokemonListapi';
+import '../component_css/FontStyle_module.css';
+import NameFy from '../helpers/word-helper';
 
 const PokemonCardComponent = ({ pokeName, pokemonurl }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,8 +28,8 @@ const PokemonCardComponent = ({ pokeName, pokemonurl }) => {
         <LoaderComponent loading={isLoading}>
           <PokemonAvatarComponent pokemon={pokemon} />
           <div className="card-body text-center">
-            <h5 className="card-title text-center">{pokeName}</h5>
-            <ViewPokemonComponent pokeName={pokeName} pokeHeader={pokemon} />
+            <h5 className="card-title text-center">{NameFy(pokeName)}</h5>
+            <ViewPokemonComponent pokeName={pokeName} pokemon={pokemon} />
           </div>
         </LoaderComponent>
       </div>

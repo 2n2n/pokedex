@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Pokemon Solid";
+    src: url("../fonts/Pokemon Solid.ttf") format("truetype");
+    /* Add additional font formats if necessary */
+    /* Specify the correct path to the font files */
+  }
+  
+  @font-face {
+    font-family: "Pokemon Hollow";
+    src: url("../fonts/Pokemon Hollow.ttf") format("truetype");
+    /* Add additional font formats if necessary */
+    /* Specify the correct path to the font files */
+  }
+  
+
+  @font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+    /* Add additional font formats if necessary */
+    /* Specify the correct path to the font files */
+  }
+  
+
+
+  .col {
+    font-family: "Roboto-Bold", sans-serif;
+  }
+
+  h5 {
+    font-family: "Roboto-Bold", sans-serif;
+  }
+  
+
+  .btn {
+    font-family: "Roboto-Bold", sans-serif;
+  }
+  
+
+ 

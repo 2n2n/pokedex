@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router';
 import '../component_css/PokeStat_module.css';
 
 function PokemonInfo() {
