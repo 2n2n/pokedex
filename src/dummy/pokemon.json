@@ -1,26 +1,26 @@
 [
-    {
-        "name": "bulbasaur",
-        "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        }
-    },
-    {
-        "name": "ivysaur",
-        "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-        }
-    },
-    {
-        "name": "venusaur",
-        "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
-        }
-    },
-    {
-        "name": "charmander",
-        "sprites": {
-            "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        }
+  {
+    "name": "bulbasaur",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
     }
+  },
+  {
+    "name": "ivysaur",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+    }
+  },
+  {
+    "name": "venusaur",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+    }
+  },
+  {
+    "name": "charmander",
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    }
+  }
 ]

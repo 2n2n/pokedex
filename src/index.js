@@ -1,36 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css"
-import Home from './components/pages/Home';
-import Pokedex from './components/pages/Pokedex';
-import App from './components/pages/App';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/pages/Home";
+import Pokedex from "./components/pages/Pokedex";
+import App from "./components/pages/App";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />
+    path: "/",
+    element: <Home />,
   },
   {
-    path: '/pokedex',
-    element: <Pokedex />
+    path: "/pokedex",
+    element: <Pokedex />,
   },
   {
-    path: '/app',
-    element: <App />
-  }
+    path: "/app",
+    element: <App />,
+  },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider  router={router}/>
-  </React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function
