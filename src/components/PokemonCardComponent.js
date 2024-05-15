@@ -1,34 +1,22 @@
-import { useEffect, useState, useContext } from "react";
-import NameFy from "../helpers/word-helper";
-import LoaderComponent from "./LoaderComponent";
-import PokemonAvatarComponent from "./PokemonAvatarComponent";
-import PokemonPokedex from "./PokemonPokedex";
-import { pokemonDetails } from "../App";
-import { Link } from "react-router-dom";
-// import TestComponent from "./TestComponent";
+import { useEffect, useState, useContext } from 'react';
+import LoaderComponent from './LoaderComponent';
+import PokemonAvatarComponent from './PokemonAvatarComponent';
+import { Link } from 'react-router-dom';
+import { getPokemonMetaByURL } from '../request/pokemen-api';
+import NameFy from '../helpers/word-helper';
 
-const PokemonCardComponent = ({ pokemon }) => {
-  const pokemonName = NameFy(pokemon.name);
+const PokemonCardComponent = ({ pokemon_url, _pokemonName }) => {
+  const [pokemon, setPokemon] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { setPokemonInfo } = useContext(pokemonDetails);
-
+  const pokemonName = NameFy(_pokemonName);
   useEffect(() => {
-    // set up
-    function randomGen(min, max) {
-      var rand = Math.floor(Math.random() * (max - min + 1) + min);
-      return rand;
-    }
-
-    const timeout = randomGen(500, 3000);
-
-    const timeoutInstance = setTimeout(() => {
-      setIsLoading(false);
-    }, [timeout]);
-
-    return () => {
-      // clean up
-      clearTimeout(timeoutInstance);
-    };
+    getPokemonMetaByURL(pokemon_url)
+      .then((data) => {
+        setPokemon(data);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -41,10 +29,6 @@ const PokemonCardComponent = ({ pokemon }) => {
             <Link className="btn btn-primary" to="details" state={{ pokemon }}>
               {`View ${pokemonName}`}
             </Link>
-            {/* <a href="#" class="btn btn-primary" onClick={()=> {
-                            setPokemonInfo({pokemon})
-                            window.location.pathname = '/details';
-                        }} >{`View ${pokemonName}`}</a> */}
           </div>
         </LoaderComponent>
       </div>

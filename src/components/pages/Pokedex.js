@@ -1,10 +1,9 @@
-import PokemonPokedex from "../PokemonPokedex";
-import { pokemonDetails } from "../../App";
-import { useContext } from "react";
-import { useLocation } from "react-router-dom";
+import PokemonPokedex from '../PokemonPokedex';
+import { useLocation } from 'react-router-dom';
 
 const Pokedex = () => {
   const { state } = useLocation();
+  console.log(state);
   return (
     <div className="container">
       <PokemonPokedex pokemonDetails={state} />

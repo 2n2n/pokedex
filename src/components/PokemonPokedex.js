@@ -1,8 +1,11 @@
-import NameFy from "../helpers/word-helper";
-import PokemonAvatarComponent from "./PokemonAvatarComponent";
+import NameFy from '../helpers/word-helper';
+import PokemonAvatarComponent from './PokemonAvatarComponent';
 
 function PokemonPokedex({ pokemonDetails }) {
   const pokemonName = NameFy(pokemonDetails.pokemon.name);
+  // console.log(pokemonDetails.pokemon.moves);
+  // const { move } = pokemonDetails.pokemon.moves;
+  // console.log(move);
   return (
     <>
       <div class="row mt-3 mb-3">
@@ -21,7 +24,7 @@ function PokemonPokedex({ pokemonDetails }) {
                 {pokemonDetails.pokemon.types.map((_type) => {
                   return (
                     <a href="#" class="btn btn-primary m-1" disabled="disabled">
-                      {NameFy(_type)}
+                      {NameFy(_type.type.name)}
                     </a>
                   );
                 })}
@@ -35,7 +38,7 @@ function PokemonPokedex({ pokemonDetails }) {
               {pokemonDetails.pokemon.moves.map((_move) => {
                 return (
                   <a href="#" class="btn btn-primary m-1" disabled="disabled">
-                    {NameFy(_move)}
+                    {NameFy(_move.move.name)}
                   </a>
                 );
               })}

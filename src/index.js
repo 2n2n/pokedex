@@ -1,40 +1,40 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import reportWebVitals from "./reportWebVitals";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap";
-import App from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Pokedex from "./components/pages/Pokedex";
-import ShinyPokemonForm from "./components/ShinyPokemonComponent";
-import PokemonCatalog from "./components/pages/PokemonCatalog";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap';
+import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Pokedex from './components/pages/Pokedex';
+import ShinyPokemonForm from './components/ShinyPokemonComponent';
+import PokemonCatalog from './components/pages/PokemonCatalog';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <PokemonCatalog />,
       },
       {
-        path: "details",
+        path: 'details',
         element: <Pokedex />,
       },
     ],
   },
   {
-    path: "/shinypokemon",
+    path: '/shinypokemon',
     element: <ShinyPokemonForm />,
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

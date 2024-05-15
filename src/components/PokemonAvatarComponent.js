@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const PokemonAvatarComponent = ({ pokemon }) => {
   const [pokemonView, setPokemonView] = useState(true);
@@ -7,24 +7,12 @@ const PokemonAvatarComponent = ({ pokemon }) => {
     setPokemonView(!pokemonView);
   };
 
-  // useEffect(() => {
-
-  // }, [pokemonView]);
-
   return (
     <div className="pokemon-card">
       {pokemonView ? (
-        <img
-          src={pokemon.sprites.front_default}
-          className="card-img-top"
-          alt={pokemon.name}
-        />
+        <img src={pokemon.sprites.front_default} className="card-img-top" alt={pokemon.name} />
       ) : (
-        <img
-          src={pokemon.sprites.back_default}
-          className="card-img-top"
-          alt={pokemon.name}
-        />
+        <img src={pokemon.sprites.back_default} className="card-img-top" alt={pokemon.name} />
       )}
 
       <center>
