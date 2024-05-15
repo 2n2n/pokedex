@@ -5,7 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
+import "bootstrap/dist/js/bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css"
 import Home from './components/pages/Home';
 import Pokedex from './components/pages/Pokedex';
