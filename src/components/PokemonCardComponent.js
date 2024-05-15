@@ -26,7 +26,7 @@ const PokemonCardComponent = ({ pokemon_url, _pokemonName }) => {
           <PokemonAvatarComponent pokemon={pokemon} />
           <div class="card-body text-center">
             <h5 className="card-title text-center">{pokemonName}</h5>
-            <Link className="btn btn-primary" to="details" state={{ pokemon }}>
+            <Link className="btn btn-primary" to="/details" state={{ pokemon }}>
               {`View ${pokemonName}`}
             </Link>
           </div>

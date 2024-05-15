@@ -26,7 +26,7 @@ function App() {
           }}
         >
           <PokemonHeader />
-          <div className="container border border-2 rounded-1 mt-5 bg-white">
+          <div className="container border border-3 rounded-1 shadow  mt-5 mb-5 bg-white mainPage" >
             <Outlet />
           </div>
         </pokemonDetails.Provider>

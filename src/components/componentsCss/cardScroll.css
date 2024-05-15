@@ -1,0 +1,39 @@
+.scrollable-div {
+  max-height: 450px; /* Set your desired height */
+  overflow-y: auto;
+  position: relative; /* Ensure the header stays fixed within the relative container */
+
+}
+
+.fixed-header {
+  position: sticky; /* Fixes the header at the top of the div */
+  top: 0;
+  padding: 10px 0; /* Add some padding for better visual appearance */
+}
+.listOfPokemon {
+    max-width: 44%;
+    position: -webkit-sticky;
+}
+
+.imagePokemon{
+    max-width: 200px;
+    
+}
+
+.motherDiv {
+    column-count:4;
+  }
+   
+.pokeballIconInName {
+    display: flex;
+    align-items: center;
+}
+.pokeballIconInName img {
+    margin-right: 10px; /* Adjust the spacing between the image and the text */
+    width: 50px; /* Set the desired width */
+    height: 50px; /* Set the desired height */
+}
+
+.imagePokemon{
+    
+}

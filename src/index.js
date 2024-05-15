@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Pokedex from './components/pages/Pokedex';
 import ShinyPokemonForm from './components/ShinyPokemonComponent';
 import PokemonCatalog from './components/pages/PokemonCatalog';
+import SearchComponent from './components/SearchComponent';
 
 const router = createBrowserRouter([
   {
@@ -17,10 +18,22 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <PokemonCatalog />,
+        children: [
+          {
+            index: true,
+            element: <SearchComponent />,
+          },
+        ],
       },
       {
-        path: 'details',
+        path: '/details',
         element: <Pokedex />,
+        children: [
+          {
+            index: true,
+            element: <PokemonCatalog  changingColNumber='row g-2 row-cols-1'/>,
+          },
+        ],
       },
     ],
   },
