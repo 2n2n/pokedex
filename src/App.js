@@ -1,37 +1,40 @@
-import PokemonCardComponent from "./components/PokemonCardComponent";
-import SearchComponent from "./components/SearchComponent";
-import NavBarComponent from "./components/NavBarComponent";
-import pokemons from './dummy/pokemon.json';
+import NavBarComponent from './components/NavBarComponent';
+import { createContext, useState } from 'react';
+import { Outlet } from 'react-router';
 
+export const PokemonInfoContext = createContext();
+export const search = createContext();
 function App() {
-
-
+  const [pokeNameHeader, setpokemonName] = useState(0);
+  const [searchPokemon, setSearchPokemon] = useState('');
 
   return (
-   
- 
-    <div>
-      <NavBarComponent />
-    
-        <div className="container">
-            <div id="layoutdiv" className="row g-2 row-cols-4">
-            
-            { 
-              pokemons.map((_pokemon) => {
-                
-                return <PokemonCardComponent  pokemon={_pokemon} />
-                
-              })
+    <search.Provider
+      value={{
+        searchPokemon,
+        setSearchPokemon,
+      }}
+    >
+      <PokemonInfoContext.Provider
+        value={{
+          pokeNameHeader,
+          setpokemonName,
+        }}
+      >
+        <div>
+          <NavBarComponent />
 
-              
-            }
-        
-          </div>
+          {
+            <div className="container">
+              <Outlet />
+            </div>
+          }
         </div>
-       
-      </div>
-   
+      </PokemonInfoContext.Provider>
+    </search.Provider>
   );
 }
 
 export default App;
+
+// loading state by default in true thne if cliked will show spinner and hide

@@ -2,12 +2,34 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
-import "bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import PokemonCatalog from './pages/PokemonCatalog';
+import PokeIndex from './pages/PokeIndex';
+
+const router = createBrowserRouter([
+  {
+    path: '/app',
+    element: <App />,
+    children: [
+      {
+        path: '/app',
+        element: <PokemonCatalog />,
+      },
+      {
+        path: 'details',
+        element: <PokeIndex />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
+    {/* <App/> */}
   </React.StrictMode>
 );
 
