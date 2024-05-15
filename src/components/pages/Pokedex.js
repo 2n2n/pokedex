@@ -1,11 +1,15 @@
+import PokemonPokedex from "../PokemonPokedex";
+import { pokemonDetails } from "../../App";
+import { useContext } from "react";
+import { useLocation } from "react-router-dom";
 
 const Pokedex = () => {
-    return (
-        <div className="container" >
-            <h1>Pokemon Details outlet</h1>
-            {/* <PokemonPokedex pokemonDetails ={pokemonInfo} /> */}
-        </div>   
-    )
-}
+  const { state } = useLocation();
+  return (
+    <div className="container">
+      <PokemonPokedex pokemonDetails={state} />
+    </div>
+  );
+};
 
 export default Pokedex;

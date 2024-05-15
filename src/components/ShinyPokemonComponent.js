@@ -1,10 +1,5 @@
-
 function ShinyPokemonForm(params) {
-    return(
-        <h1>✨Shiny</h1>
-
-        
-    )
+  return <h1>✨Shiny</h1>;
 }
 
-export default ShinyPokemonForm
+export default ShinyPokemonForm;
