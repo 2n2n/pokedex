@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addClick, resetClicks } from '../redux/slice/clickSlice';
 
 /**
  *
@@ -7,17 +9,63 @@ import { useRef, useState } from 'react';
  * 2. when even number, background color should be blue
  */
 const TestComponent = () => {
-  const [counter, setCounter] = useState(0);
+  const clicks = useSelector((state) => state.clicks.value);
+  const dispatch = useDispatch();
   const h1Ref = useRef();
+  const [inputRef, setInputRef] = useState();
 
-  const onClickHandler = () => {
-    setCounter((prevState) => prevState + 1);
-  };
+  const [arrObj, setArrObj] = useState([{ content: 'blah1' }, { content: 'blah2' }]);
+  const [activeIdx, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    setInputRef(arrObj[activeIdx].content);
+  }, [activeIdx]);
+
+  useEffect(() => {
+    console.log('Change has been detected: ', arrObj);
+  }, [arrObj]);
 
   return (
     <>
-      <h1 ref={h1Ref}>Clicks: {counter}</h1>
-      <button onClick={onClickHandler}>Click Me</button>
+      <h1 ref={h1Ref}>Clicks: {clicks}</h1>
+      <button onClick={() => dispatch(addClick())}>Click Me</button>
+      <button onClick={() => dispatch(resetClicks())}>Reset</button>
+      <hr />
+      <input
+        value={inputRef}
+        onChange={(e) => {
+          setInputRef(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          setArrObj(
+            arrObj.map((item, idx) => {
+              if (idx === activeIdx) {
+                item.content = inputRef;
+              }
+              return item;
+            })
+          );
+        }}
+      >
+        update
+      </button>
+      <ul>
+        {arrObj.map((item, idx) => {
+          return <li onClick={() => setActiveIndex(idx)}>{item.content}</li>;
+        })}
+      </ul>
+      <button onClick={() => setArrObj([...arrObj, { content: 'blah3' }])}>+</button>
+      <button
+        onClick={() => {
+          const newArr = [...arrObj];
+          newArr.pop();
+          setArrObj(newArr);
+        }}
+      >
+        -
+      </button>
       <hr />
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Launch static backdrop modal
