@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleLeft, faCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faCaretLeft, faCaretRight, faSquareCaretLeft, faSquareCaretRight } from '@fortawesome/free-solid-svg-icons';
 import '../component_css/FontStyle_module.css';
+import { Link } from 'react-router-dom';
 
 const PokeIndex = () => {
   let pokemon = useLocation();
@@ -30,6 +31,14 @@ const PokeIndex = () => {
           <div class="container">
             <div class="row">
               <div class="col">
+                <div class="position-relative">
+                  <div class="position-absolute top-0 start-0">
+                    <Link to="/App" class="btn btn-warning m-1" disabled="disabled">
+                      Back
+                    </Link>
+                  </div>
+                </div>
+
                 {click === true ? (
                   <img
                     id="cardCircle"
@@ -45,7 +54,7 @@ const PokeIndex = () => {
                 <h4>Moves</h4>
                 {poMoves.slice(0, 10).map((_moves) => {
                   return (
-                    <a href="#" class="btn btn-warning m-1" disabled="disabled">
+                    <a class="btn btn-warning m-1" disabled="disabled">
                       {NameFy(_moves.move.name)}
                     </a>
                   );
@@ -60,7 +69,7 @@ const PokeIndex = () => {
                 <h4>Abilities</h4>
                 {poAbilities.map((_ability) => {
                   return (
-                    <a href="#" class="btn btn-warning m-1" disabled="disabled">
+                    <a class="btn btn-warning m-1" disabled="disabled">
                       {NameFy(_ability.ability.name)}
                     </a>
                   );
