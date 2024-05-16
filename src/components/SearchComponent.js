@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { search } from "../App";
 
-const SearchComponent = () => {
+const SearchComponent = (props, ref) => {
   const { setSearchPokemon } = useContext(search);
   return (
     <div className="my-3 row">

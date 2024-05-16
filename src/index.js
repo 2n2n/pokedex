@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <PokemonCatalog />,
+        element: <PokemonCatalog className='row g-2 row-cols-4'/>,
         children: [
           {
             index: true,
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <PokemonCatalog  changingColNumber='row g-2 row-cols-1'/>,
+            element: <PokemonCatalog className='row g-2 row-cols-1'/>,
           },
         ],
       },
